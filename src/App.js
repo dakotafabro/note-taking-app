@@ -1,14 +1,16 @@
 import "./App.css";
 import NotesList from "./NotesList";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <h1>Hello from Notes</h1>
+      <div className="container">
+        <h1>Note Taking App</h1>
 
-      <NotesList />
+        <NotesList />
+      </div>
     </div>
   );
-}
+};
 
 export default App;

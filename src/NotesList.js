@@ -1,12 +1,16 @@
 import React from "react";
 import Note from "./Note";
 
-export default function NotesList() {
+const NotesList = () => {
   return (
     <div className="NotesList">
-      <div>
-        <Note />
+      <div className="row">
+        <div className="col-sm-3">
+          <Note />
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default NotesList;
