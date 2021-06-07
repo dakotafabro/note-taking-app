@@ -46,6 +46,7 @@ code {
 
 .Note.new {
   background-color: #67d7cc;
+  color: #000;
 }
 
 textarea {
@@ -119,7 +120,9 @@ textarea:focus {
 
 .Footer {
   text-align: center;
+  background-color: #e79ee7;
   font-size: smaller;
+  padding: 10px 30px;
 }
 
 .Footer a {
