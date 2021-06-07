@@ -4,23 +4,16 @@ import { useEffect, useState } from "react";
 import { nanoid } from "nanoid";
 import SearchBar from "./SearchBar";
 import Header from "./Header";
+import Footer from "./Footer";
 
 const App = () => {
+  const date = new Date();
+
   const [notes, setNotes] = useState([
     {
       id: nanoid(),
-      text: "This is my first note",
-      date: "6/7/2021",
-    },
-    {
-      id: nanoid(),
-      text: "This is my second note",
-      date: "6/7/2021",
-    },
-    {
-      id: nanoid(),
-      text: "This is my third note",
-      date: "6/7/2021",
+      text: "Welcome to Notes!",
+      date: date.toLocaleDateString(),
     },
   ]);
 
@@ -73,6 +66,8 @@ const App = () => {
               handleAddNote={addNote}
               handleDeleteNote={deleteNote}
             />
+
+            <Footer />
           </div>
         </div>
       </div>

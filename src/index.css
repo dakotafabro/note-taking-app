@@ -116,3 +116,18 @@ textarea:focus {
 .custom-container {
   min-height: 100vh;
 }
+
+.Footer {
+  text-align: center;
+  font-size: smaller;
+}
+
+.Footer a {
+  text-decoration: none;
+  color: #326be6;
+}
+
+.Footer a:hover {
+  text-decoration: overline;
+  color: #db4444;
+}
