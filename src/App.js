@@ -20,29 +20,26 @@ const App = () => {
       text: "This is my third note",
       date: "6/7/2021",
     },
-    {
-      id: nanoid(),
-      text: "This is my fourth note",
-      date: "6/7/2021",
-    },
-    {
-      id: nanoid(),
-      text: "This is my fifth note",
-      date: "6/7/2021",
-    },
-    {
-      id: nanoid(),
-      text: "This is my sixth note",
-      date: "6/7/2021",
-    },
   ]);
+
+  const addNote = (text) => {
+    const date = new Date();
+    const newNote = {
+      id: nanoid(),
+      text: text,
+      date: date.toLocaleDateString(),
+    };
+
+    const newNotes = [...notes, newNote];
+    setNotes(newNotes);
+  };
 
   return (
     <div className="App">
       <div className="container">
         <h1 className="mt-3">Note Taking App</h1>
 
-        <NotesList notes={notes} />
+        <NotesList notes={notes} handleAddNote={addNote} />
       </div>
     </div>
   );
